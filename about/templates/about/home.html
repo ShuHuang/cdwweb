@@ -1,0 +1,70 @@
+{% extends "about/base.html" %}
+{% load static %}
+
+{% block title %}ChemDataWriter{% endblock %}
+
+{% block content %}
+
+    <div class="py-0 ">
+      <div class="container d-flex flex-column " style="min-height: 30vh;">
+          <div class="row my-auto ">
+              <div class=" my-lg-auto py-1 my-3 text-center text-lg-left">
+                  <h1 class="display-4 mt-2 font-weight-normal" style="color: #002b04"> ChemDataWriter</h1>
+                      <p class="lead text-secondary mb-2 pb-2 mr-5 pr-5">
+                        ChemDataWriter is a transformer-based library for automatically generating research books in the chemistry area.
+                      </p>
+                      <div class="mb-2">
+                        <a class="btn btn-outline-secondary mr-2" href="{% url 'about-about' %}">Learn more</a>
+                      </div>
+              </div>
+          </div>
+
+      </div>
+      </div>
+
+   <div class="py-3 bg-gray">
+    <div class="container py-3">
+      <div class="row mb-1 ">
+        <div class="col-sm-4 text-center">
+          <a href="{% url 'about-about' %}">
+          <img class="img-feature" src="{% static 'images/read.svg' %}" style="max-height:100px; max-width:100px"></a>
+          <br></br>
+          <p class="text-secondary lead">Search, read, and retrieve</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="{% url 'data-data' %}">
+          <img class="images-feature" src="{% static 'images/summarise.svg' %}" href="#" style="max-height:100px; max-width:100px"></a>
+          <br></br>
+          <p class="text-secondary lead">Summarise and paraphrase</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="{% url 'about-about' %}">
+          <img class="images-feature" src="{% static 'images/write.svg' %}" href="#" style="max-height:100px; max-width:100px"></a>
+          <br></br>
+          <p class="text-secondary lead">Auto-generate a research book</p>
+        </div>
+      </div>
+    </div>
+   </div>
+  <div class="py-4 bg-gray">
+    <div class="container py-3">
+      <div class="row mb-6 ">
+        <div class="col-sm-6">
+                <h3 class="font-weight-lighter" style="color: #002b04">Source Code</h3>
+                <div class="pt-2">
+                  <a class="btn btn-outline-secondary" href="https://github.com/ShuHuang/chemdatawriter">Explore</a>
+                </div>
+        </div>
+        <div class="col-sm-6 ">
+          <h3 class="font-weight-lighter" style="color: #002b04">Documentation</h3>
+                <div class="pt-2">
+                  <a class="btn btn-outline-secondary" href="https://batterydataextractor.readthedocs.io/en/latest/">Explore</a>
+                </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+
+
+{% endblock %}

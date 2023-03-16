@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{#      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">#}
+      <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/replacer.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/site-style.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">a
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+      <link rel="shortcut icon" type="image/svg" href="{% static 'images/quill-pen.svg' %}"/>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% if title %}
+        <title>ChemDataWriter - {{ title }}</title>
+    {% else %}
+        <title>ChemDataWriter</title>
+    {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <<script async> src="https://www.googletagmanager.com/gtag/js?id=G-YHQY7ZJN9T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YHQY7ZJN9T');
+    </script>
+</head>
+
+<body>
+{% block body %}
+        {% block navbar %}
+            <div class="site-header">
+          <nav class="navbar navbar-expand-md navbar-light">
+          <div class="container">
+            <img src="{% static 'images/quill-pen.svg' %}" width="30" class="d-inline-block align-top" alt="">
+            <div class="navbar-header">
+              <a class="navbar-brand mr-4" href="{% url 'about-home' %}">ChemDataWriter</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'about-home' %}">Home</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'about-about' %}">About</a></li>
+<!--                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'data-data' %}">Downloads</a></li>-->
+                <li class="nav-item mx-1"><a class="nav-link" href="https://batterydataextractor.readthedocs.io/en/latest/">Documentation</a></li>
+<!--                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'batteryqa-search' %}">BatterySearch</a></li>-->
+<!--                <li class="nav-item mx-1"><a class="nav-link" href="{% url 'classifier-classifier' %}">BatteryText</a></li>-->
+
+                </ul>
+          </div>
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+{#                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>#}
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+{#                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>#}
+              {% endif %}
+            </div>
+          </nav>
+            </div>
+            </header>
+        {% endblock navbar %}
+        <div class="container">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% block content %}{% endblock %}
+        </div>
+
+        {% block footer %}
+          <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2>
+                    <a href="{% url 'about-home' %}">ChemDataWriter</a>
+                  </h2>
+                  <ul>
+                    <li><a href="http://www.mole.phy.cam.ac.uk">Molecular Engineering Group</a></li>
+                    <li><a href="http://www.phy.cam.ac.uk">Cavendish Laboratory</a></li>
+                    <li><a href="http://www.cam.ac.uk">University of Cambridge</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                  <h3>About</h3>
+                  <ul>
+                    <li>
+                      <a href="{% url 'about-citing' %}">Citing</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                  <h3>Try</h3>
+                  <ul>
+                    <li>
+                      <a href="https://github.com/ShuHuang/">Source Code</a>
+                    </li>
+
+
+                    <li>
+                      <a href="{% url 'about-contact' %}">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+        {% endblock footer %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% block scripts %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% endblock scripts %}
+    {% endblock body %}
+ </body>
+</html>

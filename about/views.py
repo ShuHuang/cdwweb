@@ -15,6 +15,11 @@ def about(request):
     return render(request, 'about/about.html', {'title': 'About'})
 
 
+@login_required()
+def reader(request):
+    return render(request, 'about/reader.html', {'title': 'Reader'})
+
+
 # @login_required()
 def citing(request):
     return render(request, 'about/citing.html', {'title': 'Citing'})

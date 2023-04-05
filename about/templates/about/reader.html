@@ -1,0 +1,106 @@
+{% extends "about/base.html" %}
+
+{% block title %}Reader | ChemDataWriter{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="font-weight-normal" style="color: #002b04">About ChemDataWriter</h1>
+  </div>
+  <section class="section section-default">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-sm-8">
+          <p class="feature-display">ChemDataWriter is a transformer-based library for automatically generating research books in the chemistry area.</p>
+
+<!--          <p class="feature-display">Scientific battery research papers are the main data source of BatteryData, from which text-based information is retrieved and database is created.</p>-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-default">
+    <div class="container py-3">
+      <div class="row">
+
+        <div class="col-sm-8">
+          <h3 class="font-weight-normal" style="color: #002b04">Features</h3>
+            <p>reader.py processes the raw XML/HTML paper files and converts them into a Reader object. </p>
+            <p> finder.py suggests the key topics of the paper corpus </p>
+            <p>retrieve.py retrieves the papers from the corpus based on the key topics</p>
+            <p>summariser.py summarises the papers based on the input text</p>
+            <p>paraphraser.py paraphrases the summarised text</p>
+            <p>title_generator.py generates the short title in terms of the original long title</p>
+            <p>latex_generator.py reorganises the summarised text and converts it into a LaTeX file</p>
+<!--             <p class="feature-display">  Database auto-generation methods include web-scraping, chemical-named entity recognition (CNER), and relationship extraction.-->
+<!--              A desktop <a href="https://figshare.com/articles/dataset/A_database_of_battery_materials_auto-generated_using_ChemDataExtractor/11888115/2?file=22789757">graphical user interface(GUI)</a> is provided to aid the use of this database and visualisation.-->
+<!--          </p>-->
+<!--{##}-->
+<!--{#          <p class="font-weight-light">#}-->
+<!--{#            <b>Cite: </b>Huang, S., Cole, J.M. A database of battery materials auto-generated using ChemDataExtractor. Sci Data 7, 260 (2020).#}-->
+<!--{#            <a href="http://dx.doi.org/10.1021/acs.jcim.6b00207">10.1038/s41597-020-00602-2</a>#}-->
+<!--{#          </p>#}-->
+        </div>
+           <div class="col-sm-4 text-center">
+              <img class="img-about" src="/static/images/quill-pen.svg">
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+<!--  <section class="section section-default">-->
+<!--    <div class="container py-3">-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-8">-->
+<!--          <h3 class="font-weight-normal" style="color: #002b04">BatteryBERT Language Modelling</h3>-->
+<!--          <p class="feature-display">-->
+<!--            Huge pre-trained language models, including BatteryBERT, BatterySciBERT and BatteryOnlyBERT, are released for the text mining use.-->
+<!--              These models can be easily fine-tuned for down-stream tasks.-->
+<!--        All of the pre-trained and fine-tuned models can be downloaded from <a href="https://huggingface.co/batterydata">batterydata</a>,-->
+<!--                which can be easily accessed by the Python package <a href="https://huggingface.co/docs/transformers/index">transformers</a>.</p>-->
+<!--        </div>-->
+<!--          <div class="col-sm-4 text-center">-->
+<!--              <img class="img-about" src="/static/images/svg.svg">-->
+<!--          </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+<!--  <section class="section section-default">-->
+<!--    <div class="container py-3">-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-8">-->
+<!--          <h3 class="font-weight-normal" style="color: #002b04">Extractive Q&A System + Search Engine</h3>-->
+<!--          <p class="feature-display">-->
+<!--              The <a href="{% url 'batteryqa-qa' %}">extractive Q&A system</a> and <a href="{% url 'batteryqa-search' %}">search engine</a> are built on Q&A fine-tuned BatteryBERT, in order to probe the database to give-->
+<!--              users a chance to ask dynamic questions from the data, and probe all knowledge in the literature about battery materials.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--          <div class="col-sm-4 text-center">-->
+<!--              <img class="img-about" src="/static/images/graph.svg">-->
+<!--          </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+<!--      <section class="section section-default">-->
+<!--    <div class="container py-3">-->
+<!--      <div class="row">-->
+<!--        <div class="col-sm-8">-->
+<!--          <h3 class="font-weight-normal" style="color: #002b04">Document Classification</h3>-->
+<!--          <p class="feature-display">-->
+<!--              The <a href="{% url 'classifier-classifier' %}">document classifier</a> is built on fine-tuned BatteryBERT for sequence classification, in order to classify-->
+<!--              battery or non-battery text given a certain paragraph from abstract of full text.</p>-->
+<!--          </p>-->
+<!--        </div>-->
+<!--          <div class="col-sm-4 text-center">-->
+<!--              <img class="img-about" src="/static/images/terminal.svg">-->
+<!--          </div>-->
+
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

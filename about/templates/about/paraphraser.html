@@ -1,19 +1,17 @@
 {% extends "about/base.html" %}
 
-{% block title %}Reader | ChemDataWriter{% endblock %}
+{% block title %}Finder | ChemDataWriter{% endblock %}
 
 {% block content %}
   <div class="container">
-    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Reader</h1>
+    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Finder</h1>
   </div>
   <section class="section section-default">
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display"><i>Reader</i> is built upon the <i>Document</i> class of BatteryDataExtractor. </p>
-            <p class="feature-display">It is specifically designed to process raw XML/HTML paper files and convert them into a <i>Reader</i> object, which can then be used to extract and analyze the content of the paper in a structured and meaningful way.
-
-</p>
+          <p class="feature-display"><i>Finder</i> is designed to suggest key topics in a corpus of scientific research papers. </p>
+            <p class="feature-display"><i>Finder</i> is built upon the <i>BERTopic</i> library, which identifies and classifies the key themes and topics within a corpus of documents.</p>
         </div>
       </div>
     </div>
@@ -25,10 +23,10 @@
 
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Features</h3>
-            <p>Pre-process HTML/XML files from three publishers: RSC, Elsevier, and Springer</p>
-            <p>Extract metadata: title, author, date, journal, issue, abstract, ...</p>
-            <p>Support user-defined paper files in the JSON format</p>
-            <p>Enable large-scale scientific paper retrieval and analysis</p>
+            <p>Identify relevant topics within a large collection of scientific papers</p>
+            <p>Gain insights into emerging trends and topics within a particular field</p>
+            <p>Build your own models: embeddings, dimensionality reduction, clustering, tokeniser, weighting scheme, representation tuning</p>
+            <p>Visualise the topics per class or over time; calculate the probability of each topic</p>
         </div>
            <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/quill-pen.svg">

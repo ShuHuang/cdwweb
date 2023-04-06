@@ -32,10 +32,10 @@ ALLOWED_HOSTS = ["176.58.117.20", "127.0.0.1", "www.materialsforbatteries.org", 
 
 INSTALLED_APPS = [
     'about.apps.AboutConfig',
-    'data.apps.DataConfig',
+    # 'data.apps.DataConfig',
     'users.apps.UsersConfig',
-    'batteryqa.apps.BatteryqaConfig',
-    'classifier.apps.ClassifierConfig',
+    # 'batteryqa.apps.BatteryqaConfig',
+    # 'classifier.apps.ClassifierConfig',
     'crispy_forms',
     'macros',
     'django.contrib.admin',

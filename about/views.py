@@ -15,11 +15,6 @@ def about(request):
     return render(request, 'about/about.html', {'title': 'About'})
 
 
-@login_required()
-def reader(request):
-    return render(request, 'about/reader.html', {'title': 'Reader'})
-
-
 # @login_required()
 def citing(request):
     return render(request, 'about/citing.html', {'title': 'Citing'})
@@ -46,3 +41,37 @@ def file_response_download(request, file_path):
     else:
         raise Http404
 
+
+@login_required()
+def reader(request):
+    return render(request, 'about/reader.html', {'title': 'Reader'})
+
+
+@login_required()
+def finder(request):
+    return render(request, 'about/finder.html', {'title': 'Finder'})
+
+
+@login_required()
+def finder(request):
+    return render(request, 'about/finder.html', {'title': 'Finder'})
+
+
+@login_required()
+def retriever(request):
+    return render(request, 'about/retriever.html', {'title': 'Retriever'})
+
+
+@login_required()
+def summariser(request):
+    return render(request, 'about/summariser.html', {'title': 'Summariser'})
+
+
+@login_required()
+def paraphraser(request):
+    return render(request, 'about/paraphraser.html', {'title': 'Paraphraser'})
+
+
+@login_required()
+def generator(request):
+    return render(request, 'about/generator.html', {'title': 'Text Generator'})

@@ -1,17 +1,18 @@
 {% extends "about/base.html" %}
 
-{% block title %}Finder | ChemDataWriter{% endblock %}
+{% block title %}Paraphraser | ChemDataWriter{% endblock %}
 
 {% block content %}
   <div class="container">
-    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Finder</h1>
+    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Paraphraser</h1>
   </div>
   <section class="section section-default">
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display"><i>Finder</i> is designed to suggest key topics in a corpus of scientific research papers. </p>
-            <p class="feature-display"><i>Finder</i> is built upon the <i>BERTopic</i> library, which identifies and classifies the key themes and topics within a corpus of documents.</p>
+          <p class="feature-display"><i>Paraphraser</i> is designed to enable researchers to generate new versions of existing text data that are semantically equivalent but structurally different. </p>
+            <p class="feature-display"><i>Paraphraser</i> is based on a back-translation strategy, which involves translating the text from the original language to another language and then translating it back again.
+            </p>
         </div>
       </div>
     </div>
@@ -20,13 +21,12 @@
   <section class="section section-default">
     <div class="container py-3">
       <div class="row">
-
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Features</h3>
-            <p>Identify relevant topics within a large collection of scientific papers</p>
-            <p>Gain insights into emerging trends and topics within a particular field</p>
-            <p>Build your own models: embeddings, dimensionality reduction, clustering, tokeniser, weighting scheme, representation tuning</p>
-            <p>Visualise the topics per class or over time; calculate the probability of each topic</p>
+            <p>Avoiding plagiarism by generating new versions that are syntactically and structurally different.</p>
+            <p>Identify and preserve the underlying meaning and intent of the original text</p>
+            <p>Create multiple versions of a document for different audiences </p>
+            <p>Control the diversity by selecting different languages to be back-translated: French, German, Arabic, Chinese, Russian, Japanese</p>
         </div>
            <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/quill-pen.svg">
@@ -41,7 +41,7 @@
         <div class="col-sm-3">
                 <h3 class="font-weight-normal" style="color: #002b04">Source Code</h3>
                 <div class="pt-2">
-                  <a class="btn btn-outline-secondary" href="https://github.com/ShuHuang/chemdatawriter/blob/main/chemdatawriter/reader.py">Explore</a>
+                  <a class="btn btn-outline-secondary" href="https://github.com/ShuHuang/chemdatawriter/blob/main/chemdatawriter/paraphraser.py">Explore</a>
                 </div>
         </div>
         <div class="col-sm-3 ">

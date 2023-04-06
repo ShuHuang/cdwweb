@@ -1,17 +1,16 @@
 {% extends "about/base.html" %}
 
-{% block title %}Finder | ChemDataWriter{% endblock %}
+{% block title %}Generator | ChemDataWriter{% endblock %}
 
 {% block content %}
   <div class="container">
-    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Finder</h1>
+    <h1 class="font-weight-normal" style="color: #002b04">ChemDataWriter - Generator</h1>
   </div>
   <section class="section section-default">
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display"><i>Finder</i> is designed to suggest key topics in a corpus of scientific research papers. </p>
-            <p class="feature-display"><i>Finder</i> is built upon the <i>BERTopic</i> library, which identifies and classifies the key themes and topics within a corpus of documents.</p>
+          <p class="feature-display"><i>Generator</i> consists of the title generator and latex generator, which is designed to automatically generate short titles according to the full titles, and convert the text that has been summarised in the book into a LaTex format.</p>
         </div>
       </div>
     </div>
@@ -20,13 +19,10 @@
   <section class="section section-default">
     <div class="container py-3">
       <div class="row">
-
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Features</h3>
-            <p>Identify relevant topics within a large collection of scientific papers</p>
-            <p>Gain insights into emerging trends and topics within a particular field</p>
-            <p>Build your own models: embeddings, dimensionality reduction, clustering, tokeniser, weighting scheme, representation tuning</p>
-            <p>Visualise the topics per class or over time; calculate the probability of each topic</p>
+            <p>Generate short titles to improve the clarity and readability of the document </p>
+            <p>Generate LaTeX output for the text that has been summarised from the original document</p>
         </div>
            <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/quill-pen.svg">
@@ -41,7 +37,7 @@
         <div class="col-sm-3">
                 <h3 class="font-weight-normal" style="color: #002b04">Source Code</h3>
                 <div class="pt-2">
-                  <a class="btn btn-outline-secondary" href="https://github.com/ShuHuang/chemdatawriter/blob/main/chemdatawriter/reader.py">Explore</a>
+                  <a class="btn btn-outline-secondary" href="https://github.com/ShuHuang/chemdatawriter/blob/main/chemdatawriter/latex_generator.py">Explore</a>
                 </div>
         </div>
         <div class="col-sm-3 ">

@@ -25,7 +25,7 @@ SECRET_KEY = '*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["176.58.117.20", "127.0.0.1", "www.materialsforbatteries.org", "materialsforbatteries.org"]
+ALLOWED_HOSTS = ["143.42.247.143", "127.0.0.1", "www.chemdatawriter.org", "chemdatawriter.org"]
 
 
 # Application definition

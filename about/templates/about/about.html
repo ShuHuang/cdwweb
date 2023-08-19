@@ -10,7 +10,7 @@
     <div class="container py-1">
       <div class="row">
         <div class="col-sm-8">
-          <p class="feature-display">ChemDataWriter is a transformer-based toolkit for auto-generating books that summarise research.</p>
+          <p class="feature-display">ChemDataWriter is a transformer-based open-source toolkit, developed in Python, that leverages artificial intelligence to autonomously compile books that encapsulate key research findings. It serves as a tool for scientists seeking to remain abreast of the newest developments in their fields.</p>
         </div>
       </div>
     </div>
@@ -22,13 +22,13 @@
 
         <div class="col-sm-8">
           <h3 class="font-weight-normal" style="color: #002b04">Features</h3>
-            <p><i>Reader</i> processes the raw XML/HTML paper files and converts them into a Reader object. </p>
-            <p><i>Finder</i> suggests the key topics of the paper corpus. </p>
-            <p><i>Retriever</i> retrieves the papers from the corpus based on the key topics.</p>
-            <p><i>Summariser</i> summarises the papers based on the input text.</p>
-            <p><i>Paraphraser</i> paraphrases the summarised text.</p>
-            <p><i>Title Generator</i> generates the short title in terms of the original long title.</p>
-            <p><i>LaTeX Generator</i> reorganises the summarised text and converts it into a LaTeX file.</p>
+            <p><b>Automated Book Creation</b> ChemDataWriter facilitates the generation of comprehensive review books from a collection of research papers. By inputting a corpus of papers and optionally a set of topics for a table of contents, the toolkit crafts an in-depth review with minimal user intervention.</p>
+            <p><b>Seven-Stage Workflow</b> The toolkit encompasses a streamlined process with seven distinct stages: downloading of papers, paper screening, topic modeling, text retrieval & re-ranking, summarization, content organization, and the automated generation of references.</p>
+            <p><b>Focus on Accuracy</b> Utilizing a conservative summarization technique, ChemDataWriter ensures that the summarized content is both accurate and representative of the original research. Rather than inventing new content, it restructures existing information for clarity and brevity.</p>
+            <p><b>Integration with BatteryDataExtractor</b> ChemDataWriter incorporates BatteryDataExtractor for efficient paper downloading, processing HTML/XML documents, and filtering out non-pertinent papers based on keywords.</p>
+            <p><b>Usage of BERTopic</b> For nuanced topic generation, BERTopic is employed to cluster research papers semantically and extract unique topic representations.</p>
+            <p><b>Relevance-Driven Retrieval</b> With Haystack's retriever module, the toolkit identifies and ranks relevant papers based on the specified topics, ensuring the most pertinent research is included.</p>
+            <p><b>Structured Output</b> ChemDataWriter doesn't just summarize; it organizes. The generated content is systematically structured into a book format, complete with an academic-style reference list derived from the metadata of source files.</p>
         </div>
            <div class="col-sm-4 text-center">
               <img class="img-about" src="/static/images/quill-pen.svg">

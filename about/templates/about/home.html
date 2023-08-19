@@ -26,20 +26,20 @@
     <div class="container py-3">
       <div class="row mb-1 ">
         <div class="col-sm-4 text-center">
-            <a>
+            <a href="{% url 'about-reader' %}">
           <img class="img-feature" src="{% static 'images/read.svg' %}" style="max-height:100px; max-width:100px">
           </a>
           <br></br>
           <p class="text-secondary lead">Search, read, and retrieve</p>
         </div>
         <div class="col-sm-4 text-center">
-          <a><img class="images-feature" src="{% static 'images/summarise.svg' %}" style="max-height:100px; max-width:100px">
+          <a href="{% url 'about-summariser' %}"><img class="images-feature" src="{% static 'images/summarise.svg' %}" style="max-height:100px; max-width:100px">
           </a>
           <br></br>
           <p class="text-secondary lead">Summarise and paraphrase</p>
         </div>
         <div class="col-sm-4 text-center">
-            <a>
+            <a href="{% url 'about-generator' %}">
           <img class="images-feature" src="{% static 'images/write.svg' %}" style="max-height:100px; max-width:100px">
           </a>
           <br></br>
@@ -60,7 +60,7 @@
         <div class="col-sm-6 ">
           <h3 class="font-weight-lighter" style="color: #002b04">Documentation</h3>
                 <div class="pt-2">
-                  <a class="btn btn-outline-secondary" href="https://batterydataextractor.readthedocs.io/en/latest/">Explore</a>
+                  <a class="btn btn-outline-secondary" href="https://chemdatawriter.readthedocs.io/en/latest/">Explore</a>
                 </div>
         </div>
       </div>
